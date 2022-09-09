@@ -4,14 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 public class CounterTestCase {
 	private Counter counter;
-	/**
-	* Crea un escenario de test básico, que consiste en un contador
-	* con 10 enteros
-	*
-	* @throws Exception
-	*/
+
 	@BeforeEach
 	public void setUp() throws Exception {
 		//Se crea el contador

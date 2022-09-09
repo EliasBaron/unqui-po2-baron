@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Counter {
 	
-	ArrayList<Integer> numeros = new ArrayList<Integer>();
+	static ArrayList<Integer> numeros = new ArrayList<Integer>();
 	
 	public void addNumber(int number) {
 		numeros.add(number);
@@ -20,7 +20,7 @@ public class Counter {
 		return impares;
 	}
 	
-	public int contarPares() {
+	static public int contarPares() {
 		int pares = 0;
 		
 		for (int i = 0; i < numeros.size(); i++) {
@@ -40,6 +40,17 @@ public class Counter {
 			}
 		}
 		return multiplos;
+	}
+	
+	static public int contarPares(ArrayList<Integer> numeros) {
+		int pares = 0;
+		
+		for (int i = 0; i < numeros.size(); i++) {
+			if (numeros.get(i) % 2 == 0) {
+				pares++;
+			}
+		}
+		return pares;
 	}
 	
 }
