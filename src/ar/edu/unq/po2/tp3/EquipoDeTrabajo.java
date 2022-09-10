@@ -6,7 +6,7 @@ public class EquipoDeTrabajo {
 	String nombreEquipo;
 	static ArrayList<Persona> equipoTrabajo = new ArrayList<Persona>();
 	
-	
+
 	static public void addIntegrante(Persona integrante) {
 		equipoTrabajo.add(integrante);
 	}
@@ -15,31 +15,17 @@ public class EquipoDeTrabajo {
 		return nombreEquipo;
 	}
 	
-	public List<Integer> edadesEquipo() {
-		
-
-		List<Integer> edades = new ArrayList<>();
-		
-		for (int i = 0; i < equipoTrabajo.size(); i++) {
-			edades.add(equipoTrabajo.get(i).getEdad());
-		}
-		
-		return edades;
-		
-	}
 	
-	public double promedioEdades() {
+	public float promedioEdades() {
 		
-		List<Integer> edades = this.edadesEquipo();
-		int suma = 0;
+		int cantidadTotalEdad = 0;
+		int cantidadIntegrantes = equipoTrabajo.size();
 		
-		for (int i = 0; i < edades.size();) {
-			suma = suma + edades.get(i);
+		for (int i = 0; i < cantidadIntegrantes; i++) {
+			cantidadTotalEdad = cantidadTotalEdad + equipoTrabajo.get(i).edad;
 		}
 		
-		float promedio = suma / edades.size();
-		
-		return promedio;
+		return cantidadTotalEdad / cantidadIntegrantes;
 		
 	}
 	

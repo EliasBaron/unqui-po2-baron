@@ -11,6 +11,7 @@ public class EquipoTrabajoTestCase {
 	private Persona marcos = new Persona("marcos", "Garcia", 20);
 	private Persona mirtha = new Persona("mirtha", "Garcia", 25);
 	
+	
 	@BeforeEach
 	public void setUp() throws Exception {
 		//Se crea el contador
@@ -23,14 +24,11 @@ public class EquipoTrabajoTestCase {
 		EquipoDeTrabajo.addIntegrante(mirtha);
 	}
 	
-	/**
-	* Verificar los tests
-	*/
-	
+
 	@Test
 	public void elPromedioEdadEs25() {
 			
-			assertEquals(equipo.promedioEdades(), 20);
+			assertEquals(25, equipo.promedioEdades());
 		
 		}
 	
