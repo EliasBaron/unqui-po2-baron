@@ -23,13 +23,13 @@ class PagableTest {
 
 	@Test
 	void testCantidadAPagarDeFactura() {
-		assertEquals(100, factura.montoAPagar());
+		assertEquals(100, factura.registrado());
 	}
 
 	
 	@Test
 	void testCantidadAPagarDeImpuesto() {
-		assertEquals(50, impuesto.montoAPagar());
+		assertEquals(50, impuesto.registrado());
 	}
 	
 }
